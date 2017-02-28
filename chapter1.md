@@ -40,5 +40,9 @@ correct for the example:
 4. Go to the next example in the training set and repeat steps 2-4 until the Perceptron
 makes no more mistakes
 
+> 뉴런의 기본 설명 : 입력 - weigh - Sum up - Activate - 출력
 
-
+### 3.2 Neural Networks are Amazing
+히든 레이어를 포함한 멀티 레이어 설명 
+* Special Purpose Intelligence : Supervised learning??
+* General Purpose Intelligence : Unsupervised learning or Reinforcement Learning ??
