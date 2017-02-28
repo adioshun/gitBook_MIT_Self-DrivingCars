@@ -14,3 +14,9 @@ planning, driver state
 #### A. Project DeepTraffic
 
 #### B. Project DeepTesla
+
+## 자동 주행시 필요한 기술/정보들 
+* Localization and Mapping: Where am I?
+* Scene Understanding: Where is everyone else?
+* Movement Planning: How do I get from A to B?
+* Driver State: What’s the driver up to?
