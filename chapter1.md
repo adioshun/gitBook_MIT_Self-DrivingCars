@@ -46,3 +46,24 @@ makes no more mistakes
 히든 레이어를 포함한 멀티 레이어 설명 
 * Special Purpose Intelligence : Supervised learning??
 * General Purpose Intelligence : Unsupervised learning or Reinforcement Learning ??
+
+> 핑퐁 게임을 예시로 설명 
+
+### 3.3 Current Drawback
+* Lacks Reasoning: 
+    * Humans only need simple instructions: “You’re in control of a paddle and you can move it up and down, and your task is to bounce the ball past the other player controlled by AI.”
+* Requires big data: inefficient at learning from data
+* Requires supervised data: costly to annotate real-world data
+* Need to manually select network structure
+* Needs hyperparameter tuning for training:
+    * Learning rate
+    * Loss function
+    * Mini-batch size
+    * Number of training iterations
+    * Momentum: gradient update smoothing
+    * Optimizer selection
+* Defining a good reward function is difficult…
+
+https://youtu.be/1L0TKZQcUtA?t=40m6s
+
+
