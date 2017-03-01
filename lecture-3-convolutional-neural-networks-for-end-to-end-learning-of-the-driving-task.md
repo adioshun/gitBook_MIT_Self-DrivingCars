@@ -76,7 +76,19 @@ Konda, Kishore, and Roland Memisevic. "Learning visual odometry with a convoluti
 ## 4.4 Driver State: What’s the driver up to?
 Drive State Detection: Body Pose, Head Pose, Blink Rate, Blink Duration, Gaze Classification, Eye Pose, Drowsiness , Blink Dynamics, Micro Glances, Pupil Diameter,Micro Saccades, Cognitive Load
 
-## 5. 
+## 5.DeepTesla
+![](/assets/testpro.png)
+* 이미지(66x200 pixel)를 입력받아, 운전대 조작 명령어 보내기
+    - 9 layers
+    - 1 normalization layer
+    - 5 convolutional layers
+    - 3 fully connected layers
+    - 27 million connections
+    - 250 thousand parameters
+
+* [논문: End to end learning for self-driving cars, 2016](https://arxiv.org/abs/1604.07316), [[다운받기]](https://images.nvidia.com/content/tegra/automotive/images/2016/solutions/pdf/end-to-end-dl-using-px.pdf)
+* [GitHub:End to end learning for self-driving](https://github.com/BoltzmannBrain/self-driving)
+
 
 ---
 [^1: CV 학계에서 잘 알려진 Logitech C920활용
