@@ -9,3 +9,8 @@
 * Semi-Supervised Learning
 * Reinforcement Learning
 
+## 3. The process of Learning
+* Perceptron: Implement a NAND Gate 구현 가능 
+ * NAND gate가 정상 동작 한다면 어떤 logical function도 만들수 있으므로 중요 
+
+* Learning is the process of gradually adjusting the __weights__ and Seeing how it has an effect on the rest of the network
