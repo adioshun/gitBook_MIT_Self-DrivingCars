@@ -82,7 +82,7 @@ makes no more mistakes
 * Edge, Corners, Contours등을 사용하는 방식. (이전 방식인가?)
 * 각 항목을 사람이 이전에 정의 해주어야 함 (Hand Designed Feature)
 
-### Deep Learning Applications 
+### 3.7 Deep Learning Applications 
 > 색 칠하기, 고양이 구분, 번역등 여러 활용예 설명 
 
 할수 있는것도 있지만 못하는 것도 있음. `Moravec’s Paradox: The “Easy” Problems are Hard`
@@ -113,15 +113,36 @@ Challenges:
 * Reflections, dynamics blinding ones
 * Merging into a high-speed stream of oncoming traffic
 
-딥러닝은 완전하지 않다. 속이기 쉽다. [^1]. = 사고날 확률이 높다. 
+딥러닝은 완전하지 않다. 속이기 쉽다[1]. = 사고날 확률이 높다. 
 
 
 
 ---
-[^1]: Nguyen et al. "Deep neural networks are easily fooled: High confidence predictions for unrecognizable images." 2015
+[1]: Nguyen et al. "Deep neural networks are easily fooled: High confidence predictions for unrecognizable images." 2015
 
 
 
+### 3.8 What’s Next for Deep Learning? (5 year vision)
 
+* Ilya Sutskever, Research Director of OpenAI: Deeper models, models that need fewer examples for training.
+* Christian Szegedy, Senior Research Scientist at Google: Become so efficient that they will be able to run on cheap mobile devices.
+* Pieter Abbeel, Associate Professor in Computer Science at UC Berkeley: Significant advances in deep unsupervised learning and deep reinforcement learning.
+* Ian Goodfellow, Senior Research Scientist at Google: Neural networks that can summarize what happens in a video clip, and will be able to generate short videos. Neural networks that model the behavior of genes, drugs, and proteins and then used to design new medicines.
+* Koray Kavukcuoglu & Alex Graves, Research Scientists at Google DeepMind: An increase in multimodal learning, and a stronger focus on learning that persists beyond individual datasets.
+* Charlie Tang, Machine Learning group, University of Toronto: Deep learning algorithms ported to commercial products, much like how the face detector was incorporated into consumer cameras in the past 10 years.
+
+### 3.9 딥러닝 라이브러리들
+
+|라이브러리|개발사|특징|
+|-|-|-|
+|Tensorflow|Google|Automatic Differentiation|
+|keras||On top of Tensorflow|
+|Torch|Facebook|closer to the details|
+|mxNet|Amazon|Interface: Python, R, Julia|
+|Theano|모트리올대학교| One of the earlier frameworks|
+|cuDNN|NVIDIA| CUDA onthe GPU|
+|neon|Intel|Nervana was working on a neural network chip|
+|caffe|Berkeley대|Initial focus on computer vision|
+|CNTK|MS|Mostly used at MS Research|
 
 
