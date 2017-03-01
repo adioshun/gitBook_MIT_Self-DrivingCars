@@ -104,9 +104,10 @@ method: ‘adadelta’, batch_size:
 - Returns an object containing timing and loss function information
 
 * [논문: End to end learning for self-driving cars, 2016](https://arxiv.org/abs/1604.07316), [[다운받기]](https://images.nvidia.com/content/tegra/automotive/images/2016/solutions/pdf/end-to-end-dl-using-px.pdf)
-* [GitHub: End-to-End Driving with TensorFlow](http://github.com/lexfridman/deeptesla)
+* [GitHub: End-to-End Driving with TensorFlow](http://github.com/lexfridman/deeptesla) : 
 * [GitHub:별첨](https://github.com/BoltzmannBrain/self-driving)
 
+> ppt자료에 신호등 파악하는 코드 올려져 있음
 
 ---
 [^1: CV 학계에서 잘 알려진 Logitech C920활용
