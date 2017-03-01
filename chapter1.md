@@ -71,5 +71,13 @@ makes no more mistakes
 * Software and Infrastructure : Git, ROS, PR2, AWS, Amazon Mechanical Turk, TensorFlow, …
 * Financial backing of large companies : Google, Facebook, Amazon, …
 
+![](/assets/Screenshot from 2017-03-01 11-52-00.png)
 
+### 3.5 Useful Deep Learning Terms
 
+![](http://www.asimovinstitute.org/wp-content/uploads/2016/09/neuralnetworks.png)
+
+### 3.6 Traditional Machine Learning 
+![](/assets/Screenshot from 2017-03-01 12-25-48.png)
+* Edge, Corners, Contours등을 사용하는 방식. (이전 방식인가?)
+* 각 항목을 사람이 이전에 정의 해주어야 함 (Hand Designed Feature)
