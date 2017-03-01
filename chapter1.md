@@ -81,3 +81,20 @@ makes no more mistakes
 ![](/assets/Screenshot from 2017-03-01 12-25-48.png)
 * Edge, Corners, Contours등을 사용하는 방식. (이전 방식인가?)
 * 각 항목을 사람이 이전에 정의 해주어야 함 (Hand Designed Feature)
+
+### Deep Learning Applications 
+> 색 칠하기, 고양이 구분, 번역등 여러 활용예 설명 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
