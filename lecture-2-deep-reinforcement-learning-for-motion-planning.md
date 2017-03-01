@@ -101,6 +101,16 @@ following:
 ### 7.3 Experience replay
 - ??? 
 
+## 8. General Reinforcement Learning Architecture (Gorila)
+![](/assets/GO.png)
+- 10x faster than Nature DQN on 38 out of 49 Atari games
+- Applied to recommender systems within Google
 
+Nair et al. "Massively parallel methods for deep reinforcement learning." (2015).
 
+## 9. The Game of Traffic
+Open Question (Again): Is driving closer to chess or to everyday conversation?
 
+DeepTraffic: Solving Traffic with Deep Reinforcement Learning
+- Goal: Achieve the highest average speed over a long period of time.
+- Requirement for Students: Follow tutorial to achieve a speed of 65mph
