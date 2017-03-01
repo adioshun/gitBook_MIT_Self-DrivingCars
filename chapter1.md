@@ -12,9 +12,9 @@ planning, driver state
 
 ### 1.2 목표 
 #### A. Project DeepTraffic
-
+![](/assets/project1.png)
 #### B. Project DeepTesla
-
+![](/assets/project2.png)
 ## 2. 자동 주행시 필요한/해결해야하는 기술/정보들 
 * Localization and Mapping: Where am I?
 * Scene Understanding: Where is everyone else?
@@ -64,6 +64,12 @@ makes no more mistakes
     * Optimizer selection
 * Defining a good reward function is difficult…
 
-https://youtu.be/1L0TKZQcUtA?t=40m6s
+### 3.4 What changed?
+* Compute : CPUs, GPUs, ASICs
+* Organized large(-ish) datasets : Imagenet
+* Algorithms and research: Backprop, CNN, LSTM
+* Software and Infrastructure : Git, ROS, PR2, AWS, Amazon Mechanical Turk, TensorFlow, …
+* Financial backing of large companies : Google, Facebook, Amazon, …
+
 
 
