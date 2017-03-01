@@ -78,16 +78,34 @@ Drive State Detection: Body Pose, Head Pose, Blink Rate, Blink Duration, Gaze Cl
 
 ## 5.DeepTesla
 ![](/assets/testpro.png)
-* 이미지(66x200 pixel)를 입력받아, 운전대 조작 명령어 보내기
-    - 9 layers
+* 이미지(66x200 pixel)를 입력받아, 운전대 Value(-20~20 Degree) 보내기
+- 9 layers
     - 1 normalization layer
     - 5 convolutional layers
     - 3 fully connected layers
-    - 27 million connections
-    - 250 thousand parameters
+- 27 million connections
+- 250 thousand parameters
+
+##### 데이터 살펴 보기 
+* 10개의 전방 카메라 운행 동영상
+    * 상하단 잘라서 운전석 이미지만 보이게 함 
+* CAN을 이용하여 Wheel value 수집
+
+###### ConvNetJS – Training Overview
+- To train a network, you first must initialize a “Trainer” object
+```
+var trainer = new
+convnetjs.SGDTrainer(net, {
+method: ‘adadelta’, batch_size:
+1, l2_decay: 0.0001});
+```
+- There are three training algorithms available: SGD, Adadelta, and Adagrad.
+- Training is performed by manually calling trainer.train(input_volume, expected_output)
+- Returns an object containing timing and loss function information
 
 * [논문: End to end learning for self-driving cars, 2016](https://arxiv.org/abs/1604.07316), [[다운받기]](https://images.nvidia.com/content/tegra/automotive/images/2016/solutions/pdf/end-to-end-dl-using-px.pdf)
-* [GitHub:End to end learning for self-driving](https://github.com/BoltzmannBrain/self-driving)
+* [GitHub: End-to-End Driving with TensorFlow](http://github.com/lexfridman/deeptesla)
+* [GitHub:별첨](https://github.com/BoltzmannBrain/self-driving)
 
 
 ---
