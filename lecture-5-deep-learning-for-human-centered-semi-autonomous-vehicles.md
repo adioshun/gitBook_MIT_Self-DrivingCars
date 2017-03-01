@@ -31,6 +31,3 @@ Gaze Classification Pipeline
 - Classification (supervised learning = improves from data)
 - Decision pruning (how confident is the prediction)
 
-
----
-[1] 
