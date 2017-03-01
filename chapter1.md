@@ -85,13 +85,40 @@ makes no more mistakes
 ### Deep Learning Applications 
 > 색 칠하기, 고양이 구분, 번역등 여러 활용예 설명 
 
+할수 있는것도 있지만 못하는 것도 있음. `Moravec’s Paradox: The “Easy” Problems are Hard`
+걷기, 중심 잡기등이 체스보다 더 어려움. 
+
+데이터 부족???
+```
+“Encoded in the large, highly evolved sensory and motor portions of the human brain is a
+billion years of experience about the nature of the world and how to survive in it.…
+Abstract thought, though, is a new trick, perhaps less than 100 thousand years old. We have
+not yet mastered it. It is not all that intrinsically difficult; it just seems so when we do it.”
+- Hans Moravec, Mind Children (1988)
+```
+* Visual perception: 540 millions years of data
+* Bipedal movement: 230+ million years of data
+* Abstract thought: 100 thousand years of data
+
+##### 그럼 자율 주행 자동차는 어려운가?
+* Human performance(사고 확률): 1 fatality per 100,000,000 miles
+* Error rate for AI to improve on: 0.000001%
+
+Challenges:
+* Snow
+* Heavy rain
+* Big open parking lots
+* Parking garages
+* Any pedestrian behaving irresponsibly or just unpredictably
+* Reflections, dynamics blinding ones
+* Merging into a high-speed stream of oncoming traffic
+
+딥러닝은 완전하지 않다. 속이기 쉽다. [^1]. = 사고날 확률이 높다. 
 
 
 
-
-
-
-
+---
+[^1]: Nguyen et al. "Deep neural networks are easily fooled: High confidence predictions for unrecognizable images." 2015
 
 
 
