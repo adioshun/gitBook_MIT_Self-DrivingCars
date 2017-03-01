@@ -14,3 +14,13 @@
  * NAND gate가 정상 동작 한다면 어떤 logical function도 만들수 있으므로 중요 
 
 * Learning is the process of gradually adjusting the __weights__ and Seeing how it has an effect on the rest of the network
+
+## 4. Feed-Forward Neural Network
+
+## 5. Reinforcement Learning
+Philosophical Motivation for Reinforcement Learning
+* Takeaway from Supervised Learning: Neural networks are great at memorization and not (yet)
+great at reasoning.
+* Hope for Reinforcement Learning: Brute-force propagation of outcomes to knowledge about `states` and `actions`. 
+ * This is a kind of brute-force “reasoning”
+
