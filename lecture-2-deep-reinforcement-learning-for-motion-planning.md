@@ -24,3 +24,21 @@ great at reasoning.
 * Hope for Reinforcement Learning: Brute-force propagation of outcomes to knowledge about `states` and `actions`. 
  * This is a kind of brute-force “reasoning”
 
+### 5.1 Agent and Environment
+At each step the agent:
+* Executes action
+* Receives observation (new state)
+* Receives reward
+
+The environment:
+- Receives action
+- Emits observation (new state)
+- Emits reward
+
+Reinforcement learning is a general-purpose framework for `decision-making`:
+- An agent operates in an environment: Atari Breakout
+- An agent has the capacity to act
+- Each action influences the agent’s future state
+- Success is measured by a reward signal
+- Goal is to select actions to maximize future reward
+
