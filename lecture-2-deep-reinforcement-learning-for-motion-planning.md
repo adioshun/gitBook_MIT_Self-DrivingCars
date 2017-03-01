@@ -114,3 +114,10 @@ Open Question (Again): Is driving closer to chess or to everyday conversation?
 DeepTraffic: Solving Traffic with Deep Reinforcement Learning
 - Goal: Achieve the highest average speed over a long period of time.
 - Requirement for Students: Follow tutorial to achieve a speed of 65mph
+
+Evaluation
+- Scoring: Average Speed
+
+
+Tutorial: http://cars.mit.edu/deeptraffic
+Simulation: http://cars.mit.edu/deeptrafficjs
