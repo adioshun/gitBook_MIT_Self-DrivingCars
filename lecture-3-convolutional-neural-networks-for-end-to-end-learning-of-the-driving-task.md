@@ -107,7 +107,7 @@ method: ‘adadelta’, batch_size:
 * [GitHub: End-to-End Driving with TensorFlow](http://github.com/lexfridman/deeptesla) : 
 * [GitHub:별첨](https://github.com/BoltzmannBrain/self-driving)
 
-> ppt자료에 신호등 파악하는 코드 올려져 있음
+> ppt자료에 신호등 색상 파악하는 텐서플로우 코드 올려져 있음
 
 ---
 [^1: CV 학계에서 잘 알려진 Logitech C920활용
