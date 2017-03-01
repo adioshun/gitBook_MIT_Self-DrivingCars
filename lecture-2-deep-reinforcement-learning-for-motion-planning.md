@@ -74,6 +74,8 @@ In practice, Value Iteration is impractical
 - Very limited states/actions
 - Cannot generalize to unobserved states
 
+
+
 ## 7. Deep Reinforcement Learning 
 Philosophical Motivation for Deep Reinforcement Learning
 - Takeaway from Supervised Learning: Neural networks are great at memorization and not (yet) great at reasoning.
