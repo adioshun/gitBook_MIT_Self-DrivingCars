@@ -84,8 +84,22 @@ Philosophical Motivation for Deep Reinforcement Learning
 states and actions. This is a kind of brute-force “reasoning”.
 - Hope for Deep Learning + Reinforcement Learning: General purpose artificial intelligence through efficient generalizable learning of the optimal thing to do given a formalized set of actions and states (possibly huge).
 
+### 7.1 Deep Q-Network Training
+Given a transition < s, a, r, s’ >, the Q-table update rule in the previous algorithm must be replaced with the
+following:
+1. Do a feedforward pass for the current state s to get predicted Q-values for all actions
+2. Do a feedforward pass for the next state s’ and calculate maximum overall network outputs max a’ Q(s’, a’)
+3. Set Q-value target for action to r + γmax a’ Q(s’, a’) (use the max calculated in step 2).
+4. For all other actions, set the Q-value target to the same as originally returned from step 1, making the error 0 for those outputs.
+5. Update the weights using backpropagation.
 
+![](/assets/14-53-40.png)
 
+### 7.2 Exploration vs Exploitation
+- Key ingredient of Reinforcement Learning
+
+### 7.3 Experience replay
+- ??? 
 
 
 
