@@ -49,10 +49,10 @@ Major Components of an RL Agent
 - Value function: how good is each state and/or action
 - Model: agent’s representation of the environment
 
-![](/assets/Screenshot from 2017-03-01 14-09-36.png)
+![](/assets/14-09-36.png)
 
 ### 5.2 Robot in a Room 
-![](/assets/Screenshot from 2017-03-01 14-14-10.png)
+![](/assets/14-14-10.png)
 
 
 A good strategy for an agent would be to always choose an action that `maximizes the (discounted) future reward`
@@ -63,7 +63,8 @@ Off-Policy Learning
 - Q directly approximates Q* (Bellman optimality equation)
 - Independent of the policy being followed
 - Only requirement: keep updating each (s,a) pair
-![](/assets/Screenshot from 2017-03-01 14-21-12.png)
+
+![](/assets/14-21-12.png)
 
 ### 6.1 Exploration vs Exploitation
 * Key ingredient of Reinforcement Learning
