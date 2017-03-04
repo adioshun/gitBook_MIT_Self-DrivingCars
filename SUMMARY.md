@@ -6,5 +6,5 @@
 * [Lecture 3: Convolutional Neural Networks for End-to-End Learning of the Driving Task ](lecture-3-convolutional-neural-networks-for-end-to-end-learning-of-the-driving-task.md)
 * [Lecture 4: Recurrent Neural Networks for Steering through Time](lecture-4-recurrent-neural-networks-for-steering-through-time.md)
 * [Lecture 5: Deep Learning for Human-Centered Semi-Autonomous Vehicles](lecture-5-deep-learning-for-human-centered-semi-autonomous-vehicles.md)
-* [Project 1: Lane Finding](project-1-lane-finding.md)
+* [Project 4: Lane Finding](project-4-lane-finding.md)
 
