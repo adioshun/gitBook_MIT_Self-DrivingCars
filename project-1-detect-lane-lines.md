@@ -3,13 +3,13 @@ Detect highway lane lines from a video stream.
 Use OpenCV image analysis techniques to identify lines, including Hough transforms and Canny edge detection.
 
 # Galen Ballew의 해결 방안 
-, [[작성글]](https://medium.com/@galen.ballew/opencv-lanedetection-419361364fc0#.3w63mejkm), [[Jupyter]](https://github.com/galenballew/Lane-Detection-OpenCV/blob/master/P1.ipynb), [[GitHub]](https://github.com/galenballew/Lane-Detection-OpenCV)
+[[작성글]][Galen Ballew], [[Jupyter]](https://github.com/galenballew/Lane-Detection-OpenCV/blob/master/P1.ipynb), [[GitHub]](https://github.com/galenballew/Lane-Detection-OpenCV)
 
-## 개요 
+## 0. 개요 
 - OpenCV의 `Canny Edge Detector:canny()` 활용 
+- The Hough transform
 
-
-## 전처리 
+## 1. 전처리 
 - Grayscale로 이미지 변환 : 칼러정보(RGB)가 사라지고 0~255의 흑백정보만 남게 된다. 
 - 차선은 주로 노란색이나 흰색이다. 
     - Yellow can be a tricky color to isolate in RGB space
@@ -33,7 +33,7 @@ gauss_gray = gaussian_blur(mask_yw_image,kernel_size)
 ## 2. 본처리 
 ### 2.1 탐지 (Canny Edge Detection)
 `canny()` parses the pixel values according to their directional derivative (i.e. gradient)
-- gradient 계산을 위한 thresholds 지정 필요 
+- gradient 계산을 위한 thresholds[^1] 지정 필요
 - John Canny himself recommended a low to high threshold ratio of 1:2 or 1:3.
 
 ```python
@@ -74,6 +74,7 @@ def region_of_interest(img, vertices):
 
 ### 2.3 Hough Space
 The Hough transform[[1]](#Hough) 
+* Hough Transform to convert the pixel dots that were detected as edges into meaningful lines(점을 선으로 변경)
 * Hough space lines correspond to points in XY space and points correspond to lines in XY space. This is what our pipeline will look like:
     1. Pixels are considered points in XY space
     2. hough_lines() transforms these points into lines inside of Hough space
@@ -82,15 +83,66 @@ The Hough transform[[1]](#Hough)
 
 
 
-## 후처리 
+## 3. 후처리 
 Once we have our two master lines, we can average our line image with the original, unaltered image of the road to have a nice, smooth overlay. 
 ```python
 complete = cv2.addWeighted(initial_img, alpha, line_image, beta, lambda)
 ```
 
-## 결론
+## 4. 결론
 * ROI 결정은 신중히 하자. 오르막길 등에서 인식이 안될수 있다. 
+
+# Param Aggarwal의 해결 방안 
+[[작성글]][Param Aggarwal], [[Jupyter]](), [[GitHub]]()
+
+## 0. 개요 
+
+
+
+# 000의 해결 방안 
+[[작성글]][Param Aggarwal], [[Jupyter]](https://github.com/paramaggarwal/CarND-LaneLines-P1/blob/master/P1.ipynb), [[GitHub]](https://github.com/paramaggarwal/CarND-LaneLines-P1)
+
+## 0. 개요 
+
+## 1. 전처리 
+- blur the image so that only truly contrasting parts of the picture stand out in the next step.
+
+```python
+cv2.GaussianBlur(img, (kernel_size, kernel_size), 0)
+```
+
+## 2. 본처리 
+### 2.1 탐지 (Canny Edge Detection)
+
+- edge-detection : Canny Transform
+
+```python
+cv2.Canny(img, low_threshold, high_threshold)
+```
+### 2.2 create region of interest (ROI) mask 
+- we mask out most of the image and only keep the bottom part of the road in view. 
+
+### 2.3 Hough Space
+The Hough transform[[1]](#Hough) 
+
+```python
+cv2.HoughLinesP(img, rho, theta, threshold, np.array([]), minLineLength=min_line_len, maxLineGap=max_line_gap)
+```
+
+## 3. 후처리 
+* 두개의 선 중에서 가장 긴선이 나에게 중요한 라인으로 인식 하도록 처리 
+
+## 4. 결론
+
 
 
 ---
+[^1]: Determine how little and how much change is acceptable to be considered a valid edge
+
+
+
 <a name="Hough">[[1]](http://web.ipac.caltech.edu/staff/fmasci/home/astro_refs/HoughTrans_lines_09.pdf)</a>  09gr820, Line Detection by Hough transformation (2009)  <br/> 
+
+
+[Galen Ballew]: https://medium.com/@galen.ballew/opencv-lanedetection-419361364fc0#.3w63mejkm
+[Param Aggarwal]: https://medium.com/towards-data-science/my-lane-detection-project-for-the-self-driving-car-nanodegree-by-udacity-36a230553bd3#.36wzarkyr
