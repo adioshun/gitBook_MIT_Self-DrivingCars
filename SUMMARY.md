@@ -10,5 +10,5 @@
 * [Project 2: Traffic Sign Classification](project-2-traffic-sign-classification.md)
 * [Project 3 : Behavior Cloning](project-3-behavior-cloning.md)
 * [Project 4: Advanced Lane Detection](project-4-lane-finding.md)
-* [Project5 : Vehicle Tracking](project5-vehicle-tracking.md)
+* [Project 5: Vehicle Tracking](project5-vehicle-tracking.md)
 
