@@ -1,4 +1,5 @@
-# Lane Finding
+# Advanced Lane Detection
+Detect lane lines in a variety of conditions, including changing road surfaces, curved roads, and variable lighting. Use OpenCV to implement camera calibration and transforms, as well as filters, polynomial fits, and splines.
 
 ## 1. 사전 작업(Pre-work)
 1. Camera calibration, which would help us undstort the images for obtaining better accuracy.
