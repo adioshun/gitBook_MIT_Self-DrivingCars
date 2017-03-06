@@ -196,10 +196,10 @@ X_test_norm = (X_test - X_test.mean()) / (np.max(X_test) - np.min(X_test))
 # Waleed Abdulla의 해결 방안
 [[작성글]][Waleed Abdulla], [[Jupyter]](https://github.com/waleedka/traffic-signs-tensorflow/blob/master/notebook1.ipynb), [[GitHub]](https://github.com/waleedka/traffic-signs-tensorflow)
 
-> 이미지 전처리 부분만 다룸
+> 텐서플로우를 이용한 접근법 
 
-## 0. 개요
-       
+http://http://128.46.80.28:8585/Jupyter/lab
+    
 --- 
 
 ### 기타 참고 자료 
