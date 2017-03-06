@@ -181,11 +181,12 @@ X_test_std = (X_test - X_test.mean()) /np.std(X_test)
 X_train_norm = (X_train - X_train.mean()) / (np.max(X_train) - np.min(X_train))
 X_test_norm = (X_test - X_test.mean()) / (np.max(X_test) - np.min(X_test))
 ```
-중앙에 이미지 위치 하고 캡션 넣기 
+
 <div style="text-align: center"><figure><img src="http://i1.wp.com/www.jessicayung.com/wp-content/uploads/2016/12/screenshot-13.png?w=672
 "><figcaption>좌상: 원본, 우상:Normalised, 좌하: Standardised</figcaption></figure></div><br/>
-
-         
+- Sometimes standardising images can transform them from readable to humanly unreadable:
+- Normalising images brings out features we wouldn’t have been able to see otherwise.
+       
  --- 
  ### 기타 참고 자료 
 Spatial transformer network, 99.61%, [[Link1]](http://torch.ch/blog/2015/09/07/spatial_transformers.html), [[Link2]](https://github.com/Moodstocks/gtsrb.torch)
