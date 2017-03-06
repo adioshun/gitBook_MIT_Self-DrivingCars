@@ -92,14 +92,8 @@ complete = cv2.addWeighted(initial_img, alpha, line_image, beta, lambda)
 ## 4. 결론
 * ROI 결정은 신중히 하자. 오르막길 등에서 인식이 안될수 있다. 
 
+
 # Param Aggarwal의 해결 방안 
-[[작성글]][Param Aggarwal], [[Jupyter]](), [[GitHub]]()
-
-## 0. 개요 
-
-
-
-# 000의 해결 방안 
 [[작성글]][Param Aggarwal], [[Jupyter]](https://github.com/paramaggarwal/CarND-LaneLines-P1/blob/master/P1.ipynb), [[GitHub]](https://github.com/paramaggarwal/CarND-LaneLines-P1)
 
 ## 0. 개요 
