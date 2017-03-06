@@ -190,9 +190,19 @@ X_test_norm = (X_test - X_test.mean()) / (np.max(X_test) - np.min(X_test))
 "><figcaption>좌상: 원본, 우상:Normalised, 좌하: Standardised</figcaption></figure></div><br/>
 - Sometimes standardising images can transform them from readable to humanly unreadable:
 - Normalising images brings out features we wouldn’t have been able to see otherwise.
+
        
- --- 
- ### 기타 참고 자료 
+              
+# Waleed Abdulla의 해결 방안
+[[작성글]][Waleed Abdulla], [[Jupyter]](https://github.com/waleedka/traffic-signs-tensorflow/blob/master/notebook1.ipynb), [[GitHub]](https://github.com/waleedka/traffic-signs-tensorflow)
+
+> 이미지 전처리 부분만 다룸
+
+## 0. 개요
+       
+--- 
+
+### 기타 참고 자료 
 Spatial transformer network, 99.61%, [[Link1]](http://torch.ch/blog/2015/09/07/spatial_transformers.html), [[Link2]](https://github.com/Moodstocks/gtsrb.torch)
 - For data pre-processing, they use spatial transformer network to align the input data.
 
@@ -224,3 +234,4 @@ Industrial performance (e.g. Cadence) , 99.82%, [[Link1]](https://ip.cadence.com
 [Sujay Babruwad]: https://medium.com/@sujaybabruwad/how-to-identify-a-traffic-sign-using-machine-learning-7aa98c871469#.p8yo6akwi
 [hengcherkeng]: https://medium.com/@hengcherkeng/updated-my-99-40-solution-to-udacity-nanodegree-project-p2-traffic-sign-classification-5580ae5bd51f#.iwzwzwa8k
 [jessicayung]: http://www.jessicayung.com/traffic-sign-classifier-normalising-data/ 
+[Waleed Abdulla]: https://medium.com/@waleedka/traffic-sign-recognition-with-tensorflow-629dffc391a6#.ch8tmfwsn
