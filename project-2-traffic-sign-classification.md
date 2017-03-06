@@ -46,7 +46,7 @@ Implement and train a convolutional neural network to classify traffic signs. Us
  ## 4. 결과 
  
  # hengcherkeng의 해결 방안 
-[[작성글]][hengcherkeng], [[Jupyter]](https://github.com/hengck23-udacity/udacity-driverless-car-nd-p2/blob/master/submission(notebook%2Bhtml)/001/Traffic_Sign_Classifier.ipynb), [[GitHub]](https://github.com/hengck23-udacity/udacity-driverless-car-nd-p2)
+[[작성글]][hengcherkeng], [[Jupyter]](https://github.com/hengck23-udacity/udacity-driverless-car-nd-p2/blob/master/submission(notebook%2Bhtml)/001/Traffic_Sign_Classifier.ipynb), [[GitHub]](https://github.com/hengck23-udacity/udacity-driverless-car-nd-p2), [[Report]](https://github.com/hengck23-udacity/udacity-driverless-car-nd-p2/blob/master/submission%28notebook%2Bhtml%29/002/writeup_report.pdf)
 
 ## 0. 개요 
 
