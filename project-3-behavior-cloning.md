@@ -105,6 +105,10 @@ Images have 3 RGB channels with value 0 to 255.
 ## 2. 본처리 
 뉴럴 네트워크의 종류는 많기 때문에 일단 시작으로 NVIDIA 모델을 적용 하였다[[1]](#NVIDIA). 
 
+![](https://cdn-images-1.medium.com/max/800/1*YY8LNITxGOo37NQD05mJqA.png)
+
+
+
 ## 3. 후처리 
 
 ## 4. 결론 
