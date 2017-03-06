@@ -160,9 +160,13 @@ Here is the MAC[^1] computation
 # Jessica Yung의 해결 방안
 [[작성글]][jessicayung], [[Jupyter]](https://github.com/hengck23-udacity/udacity-driverless-car-nd-p2/blob/master/submission(notebook%2Bhtml)/001/Traffic_Sign_Classifier.ipynb), [[GitHub]](https://github.com/hengck23-udacity/udacity-driverless-car-nd-p2), [[Report]](https://github.com/hengck23-udacity/udacity-driverless-car-nd-p2/blob/master/submission%28notebook%2Bhtml%29/002/writeup_report.pdf)
 
+> 이미지 전처리 부분만 다룸
+
 ## 0. 개요
 - Normalised the data
 - Did not use convolutions 
+
+> 이미지 전처리 부분만 다룸
 
 ## 1. 전처리
 Normalisation: 모든 값을 0~1사이의 값으려 변환
