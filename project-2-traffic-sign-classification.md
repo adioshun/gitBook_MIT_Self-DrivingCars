@@ -156,6 +156,36 @@ Here is the MAC[^1] computation
  - 또는 You can make the data less complex(representation, 전처리 이용). Break the problem into smaller and simpler ones(cascaded, hierarchical networks이용)
  
  
+ 
+# Jessica Yung의 해결 방안
+[[작성글]][jessicayung], [[Jupyter]](https://github.com/hengck23-udacity/udacity-driverless-car-nd-p2/blob/master/submission(notebook%2Bhtml)/001/Traffic_Sign_Classifier.ipynb), [[GitHub]](https://github.com/hengck23-udacity/udacity-driverless-car-nd-p2), [[Report]](https://github.com/hengck23-udacity/udacity-driverless-car-nd-p2/blob/master/submission%28notebook%2Bhtml%29/002/writeup_report.pdf)
+
+## 0. 개요
+- Normalised the data
+- Did not use convolutions 
+
+## 1. 전처리
+Normalisation: 모든 값을 0~1사이의 값으려 변환
+* 단점 : 데이터에 아웃라이어가 있으며 제대로 동작 안함. 대부분의 데이터들은 아웃라이어가 있음  
+
+Standardisation : transforms your data to have a mean (average) of zero and a variance of one
+ * 단점 : Your new data usually aren’t bounded, unlike normalisation.
+ 
+> Normalise 해야 하는 이유 : The same range of values for each of the inputs to the neural network can `guarantee stable convergence of weights and biases`
+
+```python
+# Standardise input (images still in colour)
+X_train_std = (X_train - X_train.mean()) / np.std(X_train)
+X_test_std = (X_test - X_test.mean()) /np.std(X_test)
+# Normalise input (images still in colour)
+X_train_norm = (X_train - X_train.mean()) / (np.max(X_train) - np.min(X_train))
+X_test_norm = (X_test - X_test.mean()) / (np.max(X_test) - np.min(X_test))
+```
+중앙에 이미지 위치 하고 캡션 넣기 
+<div style="text-align: center"><figure><img src="http://i1.wp.com/www.jessicayung.com/wp-content/uploads/2016/12/screenshot-13.png?w=672
+"><figcaption>좌상: 원본, 우상:Normalised, 좌하: Standardised</figcaption></figure></div><br/>
+
+         
  --- 
  ### 기타 참고 자료 
 Spatial transformer network, 99.61%, [[Link1]](http://torch.ch/blog/2015/09/07/spatial_transformers.html), [[Link2]](https://github.com/Moodstocks/gtsrb.torch)
@@ -175,7 +205,10 @@ Industrial performance (e.g. Cadence) , 99.82%, [[Link1]](https://ip.cadence.com
 ![](https://cdn-images-1.medium.com/max/800/1*LVZJI0nCDv4ID-K3WlMKCA.png)
 ![](https://cdn-images-1.medium.com/max/800/0*nxvL_epLjOh_0U7H.png)
  
+
  
+  
+    
  ---
 
 [^1]: multiply–accumulate operation counts
@@ -185,3 +218,4 @@ Industrial performance (e.g. Cadence) , 99.82%, [[Link1]](https://ip.cadence.com
  
 [Sujay Babruwad]: https://medium.com/@sujaybabruwad/how-to-identify-a-traffic-sign-using-machine-learning-7aa98c871469#.p8yo6akwi
 [hengcherkeng]: https://medium.com/@hengcherkeng/updated-my-99-40-solution-to-udacity-nanodegree-project-p2-traffic-sign-classification-5580ae5bd51f#.iwzwzwa8k
+[jessicayung]: http://www.jessicayung.com/traffic-sign-classifier-normalising-data/ 
