@@ -103,6 +103,7 @@ Images have 3 RGB channels with value 0 to 255.
 - The normalized array has range from -1 to 1 : `X_norm = X_in/127.5–1`
 
 ## 2. 본처리 
+뉴럴 네트워크의 종류는 많기 때문에 일단 시작으로 NVIDIA 모델을 적용 하였다[[1]](#NVIDIA). 
 
 ## 3. 후처리 
 
@@ -132,7 +133,7 @@ Images have 3 RGB channels with value 0 to 255.
 ---
 
 
-<a name="Dmytro">[1]</a> “Systematic evaluation of CNN advances on the ImageNet”- Dmytro Mishkin, Nikolay Sergievskiy, Jiri Matas, ARXIV 2016. <br/>
+<a name="NVIDIA">[1](https://arxiv.org/abs/1604.07316)</a> “End to End Learning for Self-Driving Cars”- Mariusz Bojarski, ARXIV 2016. <br/>
 
 
 [Jeremy Shannon]: https://medium.com/udacity/udacity-self-driving-car-nanodegree-project-3-behavioral-cloning-446461b7c7f9#.9ooumxskz
