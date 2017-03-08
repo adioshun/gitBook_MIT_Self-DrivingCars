@@ -116,10 +116,11 @@ Images have 3 RGB channels with value 0 to 255.
 
 
 
-# 000의 해결 방안 
-[[작성글]][Jeremy Shannon], [[Jupyter]](), [[GitHub]](https://github.com/jeremy-shannon/CarND-Behavioral-Cloning-Project)
+# James Jackson의 해결 방안 
+[[작성글]][James Jackson], [[Jupyter]](), [[GitHub]](https://github.com/jeremy-shannon/CarND-Behavioral-Cloning-Project)
 
 ## 0. 개요 
+
 
 ## 1. 전처리 
 
@@ -142,3 +143,4 @@ Images have 3 RGB channels with value 0 to 255.
 
 [Jeremy Shannon]: https://medium.com/udacity/udacity-self-driving-car-nanodegree-project-3-behavioral-cloning-446461b7c7f9#.9ooumxskz
 [Arnaldo Gunzi]: https://chatbotslife.com/teaching-a-car-to-drive-himself-e9a2966571c5#.6vz6bdqat
+[James Jackson]: http://blog.openroar.com/2016/12/29/self-driving-car-deep-learning/
