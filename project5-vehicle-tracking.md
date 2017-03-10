@@ -2,7 +2,7 @@ Project: Vehicle Tracking
 Track vehicles in camera images using image classifiers such as SVMs, decision trees, HOG, and DNNs. Apply filters to fuse position data.
 
 
-# Mehdi Sqalli 의 해결 방안 
+# Milutin N. Nikolic의 해결 방안 
 [[작성글]][Milutin N. Nikolic], [[GitHub]](https://github.com/ajsmilutin/CarND-Vehicle-Detection)
 
 ## 0. 개요 
@@ -108,8 +108,41 @@ After that, the connected components get labeled and the bounding box is calcula
 > 이부분을 이해 하기 위해서는 저자의 [Advanced lane finding project](https://medium.com/@ajsmilutin/advanced-lane-finding-5d0be4072514#.lqwqiqq40)를 이해하여야 함
 
 > 추후 다시 확인 
+
+
+# Vivek Yadav의 해결 방안 
+[[작성글]][Vivek Yadav], [[GitHub]]()
+
+## 0. 개요 
+U-net을 이용한 차량 탐지 [[U-Net 홈페이지]][U-net], 
+- U-net is a encoder-decoder type of network for pixel-wise predictions
+- U-net is unique because in U-net, the receptive fields after convolution are concatenated with the receptive fields in up-convolving process
+    - This additional feature allows network to use original features in addition to features after up-convolution
+    - This results in overall better performance than a network that has access to only features after up-convolution.
+
+## 1. 전처리 
+### 1.1 Data 
+-  Udacity 데이터셋 이용 (차량, 트럭, 보행자)
+- 차량 & 트럭을 하나의 분류로 합치고, 보행자 삭제 
+
+### 1.2 Data preparation and augmentation
+#### A. stretching
+- We first define 4 points near corners of the original image (shown in purple). 
+- We then stretch these points so these points become the new boundary points. 
+- We modify the bounding boxes accordingly
+
+#### B. Translation
+
+
+#### C. brightness augmentation
+
+
+
 ---
 [Milutin N. Nikolic]: https://medium.com/towards-data-science/vehicle-detection-and-distance-estimation-7acde48256e1#.kn4mgi76v
+[Vivek Yadav]: https://chatbotslife.com/small-u-net-for-vehicle-detection-9eec216f9fd6#.uoaixnhi4
+[U-net]: http://lmb.informatik.uni-freiburg.de/people/ronneber/u-net/
+
 
 <a name="hog">[1]</a> http://s-pear.tistory.com/4 <br/>
 
