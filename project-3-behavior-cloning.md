@@ -114,7 +114,7 @@ Images have 3 RGB channels with value 0 to 255.
 ## 4. 결론 
 
 
-
+> 전처리에 대한 대부분을 커버 하고 있음
 
 # James Jackson의 해결 방안 
 [[작성글]][James Jackson], [[Jupyter]](), [[GitHub]](https://github.com/jeremy-shannon/CarND-Behavioral-Cloning-Project)
@@ -123,8 +123,40 @@ Images have 3 RGB channels with value 0 to 255.
 
 
 ## 1. 전처리 
+Data Augmentation
+- Smoothing steering angles & normalizing steering angles based on throttle/speed, are both investigated
+- A constant 0.25 (6.25 deg.) is added to left camera image steering angles, and substracted from right camera image steering angles
+ - This forces aggressive right turns when drifting to the left of the lane, and vice-versa. 
+- Variable steering adjustment based on the current steering angle is an area for future investigation.
+- All images (left, center, right) are flipped to provide additional data & balance the dataset
+- 불필요한 상하단 이미지 제거 
+- 학습 시간 단축을 위해 resized to 64x64 pixels
+
+> 더 자세한 augmentation은 [Vivek Yadav][Vivek Yadav] 참고 
 
 ## 2. 본처리 
+### 2.1 The Model
+[comma.ai][comma]의 학습모델을 기본으로한 Tensorflow/Keras 이용
+
+![](http://blog.openroar.com/images/model_summary.jpg)
+
+- The input layer takes a 64x64x3 (RGB) image and normalizes the values between -1 and 1 via a lambda funtion. 
+- There are 3 convolutional layers 
+ - using 16 filters of size 8x8
+ - 32 filters of size 5x5
+ - finally 64 filters of size 5x5.
+- The convolutional layers are separated by activation layers, specificially Exponential Linear Units (ELUs). 
+- DropOut 
+ - dropout (0.2) is applied before switching to the first fully connected layer. 
+ - A second dropout (0.5) is applied before the final fully connected layer of 513 parameters. 
+ - The dropouts create a robust network that is more resilient to overfitting. 
+- The model uses 592,497 parameters in total. 0.0194 after the 8th 
+
+### 2.2 Training
+- Adam optimizer(learning rate of 0.001 )
+- Training is run for 8 epochs
+- Mean Squared Error (MSE) :  1st epoch is 0.0327  --> 
+
 
 ## 3. 후처리 
 
@@ -144,3 +176,7 @@ Images have 3 RGB channels with value 0 to 255.
 [Jeremy Shannon]: https://medium.com/udacity/udacity-self-driving-car-nanodegree-project-3-behavioral-cloning-446461b7c7f9#.9ooumxskz
 [Arnaldo Gunzi]: https://chatbotslife.com/teaching-a-car-to-drive-himself-e9a2966571c5#.6vz6bdqat
 [James Jackson]: http://blog.openroar.com/2016/12/29/self-driving-car-deep-learning/
+[Vivek Yadav]: https://chatbotslife.com/using-augmentation-to-mimic-human-driving-496b569760a9#.khr48mn7v
+[comma]: https://github.com/commaai/research
+
+[^1]: Smoothing steering angles by [SciPy Butterworth filter](https://docs.scipy.org/doc/scipy-0.14.0/reference/generated/scipy.signal.butter.html)
