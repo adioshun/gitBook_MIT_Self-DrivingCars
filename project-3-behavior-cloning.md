@@ -162,13 +162,47 @@ Data Augmentation
 
 ## 4. 결론 
 
+# Alena Kastsiukavets의 해결 방안 
+[[작성글]][Alena Kastsiukavets], [[Jupyter]](https://github.com/Helen1987/CarND-Behavioral-Cloning-P3/blob/master/Training%20data.ipynb), [[GitHub]](https://github.com/Helen1987/CarND-Behavioral-Cloning-P3)
+
+## 0. 개요 
+Transfer Learning with Feature Extraction 기법 적용 
+- this approach is chosen when your NN is similar to base network
+- We have a pre-trained neural network from ImageNet Competition
+ - ImageNet모델은 Object탐지에 좋은 성능을 보이고 있고, 차선도 Object의 하나이다. 
 
 
+Transfer Learning기법의 장점
+- 많은 데이터가 불필요하다. 따라서 유다시티  ~8.000로도 충분하다. 
+- Thanks to frozen weights and small amount of images (I use ~400 images) I have significantly reduced training time and was able to play a lot with my car and analyze its behavior.
+- I had a small hope that pre-trained NN would help me to generalize to track 2 without heavy data-augmentation. 
+ - Unfortunately, I had to add brightness augmentation to generalize to track2.
 
+## 1. 전처리 
+- cropping to remove unnecessary information from the image
+- applied random brightness for every image from tests set
+
+## 2. 본처리 
+![](https://cdn-images-1.medium.com/max/800/1*i5y6LXNfWAXEFZlY5YjgJA.jpeg)
+
+- Feature extraction를 위한 모델로 VGG16 이용 
+ - It has good performance and at the same time quite simple. 
+ - Moreover it has something in common with popular NVidia and [comma.ai](https://github.com/commaai/research/blob/master/train_steering_model.py) models. 
+ - VGG16을 이용하기 위해서는 최소 48x48크기의 Color이미지를 사용해함 
+
+## 3. 후처리
+
+## 4. 결론 
+There is a list of techniques I found useful for this project:
+- 항상 코드를 재 확인해라. 사소한 실수들이 내재되어 있을수 있다. 저자는 초기에 실수로 검은 사진만 학습에 사용하였다. 
+- 여러 기술들을 한번에 적용해보고 싶겠지만, 하나씩 적용해 가면서 살펴 보는게 중요하다.  And tuning became easy and predictable!
+- 데이터의 균형을 이루어라 Balance your data! It is the key point.
+- When your model is good, validation loss is a good indicator of better model. 
+ - Before this it is good to use callbacks and save your model after each iteration. 
+ - They allow you to analyze your model behavior! [[참고]](https://medium.com/@deniserjames/denise-james-bsee-msee-5beb448cf184#.b08sv8h38)
 
 
 ---
-
 
 <a name="NVIDIA">[1](https://arxiv.org/abs/1604.07316)</a> “End to End Learning for Self-Driving Cars”- Mariusz Bojarski, ARXIV 2016. <br/>
 
@@ -178,5 +212,7 @@ Data Augmentation
 [James Jackson]: http://blog.openroar.com/2016/12/29/self-driving-car-deep-learning/
 [Vivek Yadav]: https://chatbotslife.com/using-augmentation-to-mimic-human-driving-496b569760a9#.khr48mn7v
 [comma]: https://github.com/commaai/research
+[Alena Kastsiukavets]: https://medium.com/@kastsiukavets.alena/behavioral-cloning-transfer-learning-with-feature-extraction-a17b0ebabf67#.epp8c5ao6
+
 
 [^1]: Smoothing steering angles by [SciPy Butterworth filter](https://docs.scipy.org/doc/scipy-0.14.0/reference/generated/scipy.signal.butter.html)
