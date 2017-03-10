@@ -202,6 +202,53 @@ There is a list of techniques I found useful for this project:
  - They allow you to analyze your model behavior! [[참고]](https://medium.com/@deniserjames/denise-james-bsee-msee-5beb448cf184#.b08sv8h38)
 
 
+# Denise R. James의 해결 방안 
+[[작성글]][Denise R. James], [[Jupyter]](), [[GitHub]]()
+
+## 0. 개요 
+
+- Keras `modle.fit_generator()를 효율적으로 이용
+![](https://cdn-images-1.medium.com/max/800/1*bVks-PslB96PUyA5QuYgOA.png)
+
+> 코드 설명은 본문 [[참고]](https://medium.com/@deniserjames/denise-james-bsee-msee-5beb448cf184#.b08sv8h38) 
+
+## 1. 전처리 
+- 상하단 이미지 제거 
+
+## 2. 본처리 
+![](https://cdn-images-1.medium.com/max/800/1*Bj_TtefvaMxJoXxpx3s8IQ.png)
+### 2.1 First Conv. Layer - Conv1
+For the input planes with a shape of 66x208x3, (HxWxD)
+conv1 has 24 filters of shape 5x5x3 (HxWxD)
+A stride of 2 for both the height and width (S)
+Same padding of size 1 (P)
+The formula for calculating the new output height or width of conv1 layer is:
+new_height = (input_height — filter_height + 2 * P)/S + 1
+new_width = (input_width — filter_width + 2 * P)/S + 1
+new_height = (66–5 +2*1)/2 +1 = 33
+new_width = (208–5+2*1)/2 + 1 = 104
+Output shape of conv1 layer is (33, 104, 24)
+
+### 2.2 Second Conv. Layer - Conv2
+For the input planes with a shape of 33x104x24, (HxWxD)
+conv2 has 36 filters of shape 5x5x24 (HxWxD)
+A stride of 2 for both the height and width (S)
+Same padding of size 2 (P)
+The formula for calculating the new output height or width of conv1 layer is:
+new_height = (input_height — filter_height + 2 * P)/S + 1
+new_width = (input_width — filter_width + 2 * P)/S + 1
+new_height = (33–5 +2*2)/2 +1 = 17
+new_width = (104–5+2*2)/2 + 1 = 52
+Output shape of conv1 layer is (17, 52, 36)
+Parameters = (5 x 5 x 24 + 1 ) *36 = 21636
+
+## 2.3 Third Conv. Layer - Conv3 
+
+> 이후 레이어 설명은 본문 [[참고]](https://medium.com/@deniserjames/denise-james-bsee-msee-5beb448cf184#.b08sv8h38) 
+
+## 3. 후처리 
+
+
 ---
 
 <a name="NVIDIA">[1](https://arxiv.org/abs/1604.07316)</a> “End to End Learning for Self-Driving Cars”- Mariusz Bojarski, ARXIV 2016. <br/>
@@ -213,6 +260,6 @@ There is a list of techniques I found useful for this project:
 [Vivek Yadav]: https://chatbotslife.com/using-augmentation-to-mimic-human-driving-496b569760a9#.khr48mn7v
 [comma]: https://github.com/commaai/research
 [Alena Kastsiukavets]: https://medium.com/@kastsiukavets.alena/behavioral-cloning-transfer-learning-with-feature-extraction-a17b0ebabf67#.epp8c5ao6
-
+[Denise R. James]: https://medium.com/@deniserjames/denise-james-bsee-msee-5beb448cf184#.b08sv8h38
 
 [^1]: Smoothing steering angles by [SciPy Butterworth filter](https://docs.scipy.org/doc/scipy-0.14.0/reference/generated/scipy.signal.butter.html)
