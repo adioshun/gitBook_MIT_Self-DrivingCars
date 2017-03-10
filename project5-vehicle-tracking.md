@@ -127,16 +127,57 @@ U-net을 이용한 차량 탐지 [[U-Net 홈페이지]][U-net],
 
 ### 1.2 Data preparation and augmentation
 #### A. stretching
+![](https://cdn-images-1.medium.com/max/600/1*kJwpSHBYk92her9_NZ5qLQ.png)
 - We first define 4 points near corners of the original image (shown in purple). 
 - We then stretch these points so these points become the new boundary points. 
 - We modify the bounding boxes accordingly
 
 #### B. Translation
+![](https://cdn-images-1.medium.com/max/600/1*uDYpX0G5DEg1Z2-kOtQs1A.png)
+We next apply translation transformation, to model the effect of car moving at different locations. 
 
+> ?? Translation에 대하여 다시 확인 필요 
 
 #### C. brightness augmentation
 
+## 2. 본처리 
+### 2.1 Model 
+U-net 이용 : A scaled down version of a deep learning architecture
+- 바이오 분야에서Cancer 탐지 하는데 주로 사용 
+- U-net is a encoder-decoder type network architecture for image `segmentation`
+- the feature maps from convolution part in downsampling step are fed to the up-convolution part in up-sampling step
 
+U-Net의 특징 
+- 학습 데이터양이 적을때도 좋은 성능을 보임 (less than 50 training samples)
+- 입력 이미지 크기에 대한 요구 사항(=제약)이 없음
+```
+it does not have any fully connected layers, therefore has no restriction on the size of the input image. This feature allows us to extract features from images of different sizes, which is an attractive attribute for applying deep learning to high fidelity biomedical imaging data
+``` 
+![](https://cdn-images-1.medium.com/max/800/1*Z98NhzbVISHa4CoemZS4Kw.png)
+- 입력: input to U-net is a resized 960X640 3-channel RGB image 
+- 출력: output is 960X640 1-channel mask of predictions. 
+- 활성함수: We wanted the predictions to reflect probability of a pixel being a vehicle or not, so we used an activation function of sigmoid on the last layer.
+
+### 2.2 Training
+![](https://cdn-images-1.medium.com/max/800/1*oLQ1v094VhCMYDkbDb3FrQ.png)
+- batch size of 1
+- adam optimizer with a learning rate of 0.0001
+- 10000 iterations
+
+## 3. 후처리 
+### 3.1 Objective:
+We defined a custom objective function in keras to compute approximate `Intersection over Union (IoU)` between the network output and target mask. 
+- IoU is a popular metric of choice for tasks involving bounding boxes. 
+- The objective was to maximize IoU, as IoU always varies between 0 and 1, we simply chose to minimize the negative of IoU.
+
+![](https://cdn-images-1.medium.com/max/800/1*2LPQLE87SJBRCSXhpow9sA.png)
+
+## 4. 결론 
+속도 : 20ms per image
+
+Additional links:
+- [Good collection of various segmentation models](https://handong1587.github.io/deep_learning/2015/10/09/segmentation.html)
+- [Original prize winning submission to Kaggle](https://github.com/jocicmarko/ultrasound-nerve-segmentation)
 
 ---
 [Milutin N. Nikolic]: https://medium.com/towards-data-science/vehicle-detection-and-distance-estimation-7acde48256e1#.kn4mgi76v
