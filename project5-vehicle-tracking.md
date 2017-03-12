@@ -186,7 +186,28 @@ Additional links:
 ## 0. 개요 
 - The ideal solution would run in real-time, i.e. >30FPS
 - 2005년에 linear SVM와 HOG를 이용한 나의 방법은 measly 3FPS on an i7 CPU 였다. 
-- 이번에는 [YOLO][https://pjreddie.com/darknet/yolo/]를 이용하여 구현해 보려 한다. 
+- 이번에는 [YOLO][https://pjreddie.com/darknet/yolo/]를 이용하여 구현해 보려 한다. - 65FPS 
+
+## 1. 전처리 
+### 1.1 Feature Extraction
+- spatial features: down sampled copy of the image patch to be checked itself (16x16 pixels)
+- color histogram features: capture the statistical color information of each image patch. 
+    - Cars often come in very saturated colors which is captured by this part of the feature vector.
+- Histogram of oriented gradients (HOG) features: capture the gradient structure of each image channel and work well under different lighting conditions
+    - 3가지 방식(Each Image Channel)으로 특징을 추출 하였으므로 Scale을 조정할 필요가 있음 
+    - It is therefore necessary to scale every feature to prevent one of the features being dominant merely due to its value range being at a different scale
+    - I therefore used the `Standard.Scaler` function(=scikit패키지) to `standardize features` by removing the mean and scaling to unit variance.
+
+### 1.2 Training a linear support vector machine
+- 실시간 Object 탐지에서는 반드시 실시 해야 하는 부분 
+- 실시간 속도에 영향을 미치는 요소 : length of the feature vector & the algorithm 
+- A linear SVM offered the best compromise between speed and accuracy
+    - 다른 알고리즘 대비 : random forests (fast, but less accurate), nonlinear SVMs (rbf kernel, very slow)
+
+## 2. 본처리 
+
+
+
 
 ---
 [Milutin N. Nikolic]: https://medium.com/towards-data-science/vehicle-detection-and-distance-estimation-7acde48256e1#.kn4mgi76v
