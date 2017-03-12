@@ -249,6 +249,32 @@ Parameters = (5 x 5 x 24 + 1 ) *36 = 21636
 ## 3. 후처리 
 
 
+
+# Andrew Wilkie의 해결 방안 
+[[작성글]][Andrew Wilkie], [[Jupyter]](), [[GitHub]]()
+
+## 0. 개요 
+![](https://cdn-images-1.medium.com/max/800/1*aLbu8w0Y6wJfruNZnnz0MA.png)
+Keras를 이용하여 구현 
+
+1. truncated highly logged angles to reduce bias,
+2. shifted left and right front facing driving images with corresponding steering angles adjustments to generate Recovery training examples, instead of manually recording them,
+3. cropped the camera images to the road and low horizon to help the model focus it’s learning on the important features of the image,
+4. randomly applied shadows to the training dataset as Test Track 2 is dark, and
+5. randomly mirrored the images and their corresponding steering angles to reduce the left-steering bias in the training dataset.
+
+## 1. 전처리 
+[Vivek Yadav](https://chatbotslife.com/using-augmentation-to-mimic-human-driving-496b569760a9#.s3uxspu45)’s의 방식 적용
+- An augmentation based deep neural network approach to learn human driving behavior
+ 
+## 2. 본처리
+Nvidia model 모델 사용 
+
+## 3. 후처리 
+
+## 4. 결과 
+
+
 ---
 
 <a name="NVIDIA">[1](https://arxiv.org/abs/1604.07316)</a> “End to End Learning for Self-Driving Cars”- Mariusz Bojarski, ARXIV 2016. <br/>
@@ -261,5 +287,6 @@ Parameters = (5 x 5 x 24 + 1 ) *36 = 21636
 [comma]: https://github.com/commaai/research
 [Alena Kastsiukavets]: https://medium.com/@kastsiukavets.alena/behavioral-cloning-transfer-learning-with-feature-extraction-a17b0ebabf67#.epp8c5ao6
 [Denise R. James]: https://medium.com/@deniserjames/denise-james-bsee-msee-5beb448cf184#.b08sv8h38
+[Andrew Wilkie]: https://medium.com/@andrew.d.wilkie/self-driving-car-engineer-diary-5-63d2daab4591#.vuo5hhe5u
 
 [^1]: Smoothing steering angles by [SciPy Butterworth filter](https://docs.scipy.org/doc/scipy-0.14.0/reference/generated/scipy.signal.butter.html)
