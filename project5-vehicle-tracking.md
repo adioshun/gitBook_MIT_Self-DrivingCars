@@ -181,7 +181,7 @@ Additional links:
 
 
 # Kaspar Sakmann의 해결 방안 
-[[작성글]][Kaspar Sakmann], [[GitHub]]()
+[[작성글]][Kaspar Sakmann], [[GitHub]](https://github.com/ksakmann/CarND-Vehicle-Detection)
 
 ## 0. 개요 
 - The ideal solution would run in real-time, i.e. >30FPS
@@ -198,13 +198,26 @@ Additional links:
     - It is therefore necessary to scale every feature to prevent one of the features being dominant merely due to its value range being at a different scale
     - I therefore used the `Standard.Scaler` function(=scikit패키지) to `standardize features` by removing the mean and scaling to unit variance.
 
-### 1.2 Training a linear support vector machine
+## 2. 본처리 
+###### Training a linear support vector machine
 - 실시간 Object 탐지에서는 반드시 실시 해야 하는 부분 
 - 실시간 속도에 영향을 미치는 요소 : length of the feature vector & the algorithm 
 - A linear SVM offered the best compromise between speed and accuracy
     - 다른 알고리즘 대비 : random forests (fast, but less accurate), nonlinear SVMs (rbf kernel, very slow)
 
-## 2. 본처리 
+> YOLO에서는 사용하지 않아도 속도 좋은것 같음 (As no sliding windows are used the detection is extremely fast)
+
+## 후처리 
+###### Sliding windows
+![](https://cdn-images-1.medium.com/max/1200/1*eAEYVev9Yq_CQiDlzPGAHA.png)
+
+차량 탐지를 위해 사용되는 필터 윈도우 
+- Shown below is a typical example of positive detections together with all ~150 windows that are used for detecting cars (= FALSE POSITIVE 존재)
+- 해결법:  I always kept track of the detected windows of the last 30 frames and more than 15 detections만 Positive로 간주 
+- 히트맵으로 표현 - 히트맵에 Thresodling하여 하나의 박스로 표현 
+
+
+
 
 
 
