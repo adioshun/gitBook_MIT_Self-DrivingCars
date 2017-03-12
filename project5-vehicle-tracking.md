@@ -179,11 +179,21 @@ Additional links:
 - [Good collection of various segmentation models](https://handong1587.github.io/deep_learning/2015/10/09/segmentation.html)
 - [Original prize winning submission to Kaggle](https://github.com/jocicmarko/ultrasound-nerve-segmentation)
 
+
+# Kaspar Sakmann의 해결 방안 
+[[작성글]][Kaspar Sakmann], [[GitHub]]()
+
+## 0. 개요 
+- The ideal solution would run in real-time, i.e. >30FPS
+- 2005년에 linear SVM와 HOG를 이용한 나의 방법은 measly 3FPS on an i7 CPU 였다. 
+- 이번에는 [YOLO][https://pjreddie.com/darknet/yolo/]를 이용하여 구현해 보려 한다. 
+
 ---
 [Milutin N. Nikolic]: https://medium.com/towards-data-science/vehicle-detection-and-distance-estimation-7acde48256e1#.kn4mgi76v
 [Vivek Yadav]: https://chatbotslife.com/small-u-net-for-vehicle-detection-9eec216f9fd6#.uoaixnhi4
 [U-net]: http://lmb.informatik.uni-freiburg.de/people/ronneber/u-net/
-
+[Kaspar Sakmann]: https://medium.com/@ksakmann/vehicle-detection-and-tracking-using-hog-features-svm-vs-yolo-73e1ccb35866#.i37xehad7
+[YOLO]: https://pjreddie.com/darknet/yolo/
 
 <a name="hog">[1]</a> http://s-pear.tistory.com/4 <br/>
 
