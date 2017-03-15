@@ -110,8 +110,8 @@ After that, the connected components get labeled and the bounding box is calcula
 > 추후 다시 확인 
 
 
-# Vivek Yadav의 해결 방안 
-[[작성글]][Vivek Yadav], [[GitHub]]()
+# Vivek Yadav의 해결 방안(U-net)
+[[작성글]][Vivek Yadav_unet], [[GitHub]](https://github.com/vxy10/)
 
 ## 0. 개요 
 U-net을 이용한 차량 탐지 [[U-Net 홈페이지]][U-net], 
@@ -224,7 +224,7 @@ Additional links:
 
 ---
 [Milutin N. Nikolic]: https://medium.com/towards-data-science/vehicle-detection-and-distance-estimation-7acde48256e1#.kn4mgi76v
-[Vivek Yadav]: https://chatbotslife.com/small-u-net-for-vehicle-detection-9eec216f9fd6#.uoaixnhi4
+[Vivek Yadav_unet]: https://chatbotslife.com/small-u-net-for-vehicle-detection-9eec216f9fd6#.uoaixnhi4
 [U-net]: http://lmb.informatik.uni-freiburg.de/people/ronneber/u-net/
 [Kaspar Sakmann]: https://medium.com/@ksakmann/vehicle-detection-and-tracking-using-hog-features-svm-vs-yolo-73e1ccb35866#.i37xehad7
 [YOLO]: https://pjreddie.com/darknet/yolo/
