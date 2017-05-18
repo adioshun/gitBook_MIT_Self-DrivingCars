@@ -11,4 +11,5 @@
 * [Project 3 : Behavior Cloning](project-3-behavior-cloning.md)
 * [Project 4: Advanced Lane Detection](project-4-lane-finding.md)
 * [Project 5: Vehicle Tracking](project5-vehicle-tracking.md)
+* [Didi-Challenge](didi-challenge.md)
 
