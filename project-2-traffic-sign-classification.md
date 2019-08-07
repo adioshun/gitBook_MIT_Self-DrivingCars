@@ -1,5 +1,9 @@
 # Project: Traffic Sign Classification
 
+> 추천 : [Paper with code ](https://paperswithcode.com/task/traffic-sign-recognition)
+> - [A Hierarchical Deep Architecture and Mini-Batch Selection Method For Joint Traffic Sign and Light Detection](https://paperswithcode.com/paper/a-hierarchical-deep-architecture-and-mini)
+
+
 Implement and train a convolutional neural network to classify traffic signs. Use validation sets, pooling, and dropout to choose a network architecture and improve performance.
 
 > Human performance, 98.84%
