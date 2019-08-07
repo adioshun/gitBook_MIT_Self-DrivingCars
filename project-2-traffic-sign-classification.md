@@ -1,13 +1,13 @@
 # Project: Traffic Sign Classification
+
 Implement and train a convolutional neural network to classify traffic signs. Use validation sets, pooling, and dropout to choose a network architecture and improve performance.
 
 > Human performance, 98.84%
 
-# Sujay Babruwad의 해결 방안 
-[[작성글]][Sujay Babruwad]
+---
 
-## 0. 개요 
-- 
+# [Sujay Babruwad의 해결 방안](https://medium.com/@sujaybabruwad/how-to-identify-a-traffic-sign-using-machine-learning-7aa98c871469#.p8yo6akwi)
+
 
 ## 1. 전처리 
 - Gray scale 이미지로 변경 : 도로 표지판들이 비슷한 색상 패턴을 가지고 있으므로
@@ -39,14 +39,18 @@ Implement and train a convolutional neural network to classify traffic signs. Us
  - Adam optimizer with learning rate of 0.001
  - weights initialized with mean of 0 and standard deviation of 0.1 are chosen
  - batch size 256 and 100 epochs
- 
- ## 3. 후처리
- The validation accuracy attained 98.2% on the validation set and the test accuracy was about 94.7%
- 
- ## 4. 결과 
- 
- # hengcherkeng의 해결 방안 
-[[작성글]][hengcherkeng], [[Jupyter]](https://github.com/hengck23-udacity/udacity-driverless-car-nd-p2/blob/master/submission(notebook%2Bhtml)/001/Traffic_Sign_Classifier.ipynb), [[GitHub]](https://github.com/hengck23-udacity/udacity-driverless-car-nd-p2), [[Report]](https://github.com/hengck23-udacity/udacity-driverless-car-nd-p2/blob/master/submission%28notebook%2Bhtml%29/002/writeup_report.pdf)
+
+## 3. 후처리
+The validation accuracy attained 98.2% on the validation set and the test accuracy was about 94.7%
+
+## 4. 결과 
+
+---
+   
+# [hengcherkeng의 해결 방안 ](https://becominghuman.ai/updated-my-99-40-solution-to-udacity-nanodegree-project-p2-traffic-sign-classification-5580ae5bd51f#.iwzwzwa8k)
+
+
+> [[Jupyter]](https://github.com/hengck23-udacity/udacity-driverless-car-nd-p2/blob/master/submission(notebook%2Bhtml)/001/Traffic_Sign_Classifier.ipynb), [[GitHub]](https://github.com/hengck23-udacity/udacity-driverless-car-nd-p2), [[Report]](https://github.com/hengck23-udacity/udacity-driverless-car-nd-p2/blob/master/submission%28notebook%2Bhtml%29/002/writeup_report.pdf)
 
 ## 0. 개요 
 
@@ -156,9 +160,11 @@ Here is the MAC[^1] computation
  - 또는 You can make the data less complex(representation, 전처리 이용). Break the problem into smaller and simpler ones(cascaded, hierarchical networks이용)
  
  
+---
  
-# Jessica Yung의 해결 방안
-[[작성글]][jessicayung], [[Jupyter]](https://github.com/hengck23-udacity/udacity-driverless-car-nd-p2/blob/master/submission(notebook%2Bhtml)/001/Traffic_Sign_Classifier.ipynb), [[GitHub]](https://github.com/hengck23-udacity/udacity-driverless-car-nd-p2), [[Report]](https://github.com/hengck23-udacity/udacity-driverless-car-nd-p2/blob/master/submission%28notebook%2Bhtml%29/002/writeup_report.pdf)
+# [Jessica Yung의 해결 방안](http://www.jessicayung.com/traffic-sign-classifier-normalising-data/)
+
+ > [[Jupyter]](https://github.com/hengck23-udacity/udacity-driverless-car-nd-p2/blob/master/submission(notebook%2Bhtml)/001/Traffic_Sign_Classifier.ipynb), [[GitHub]](https://github.com/hengck23-udacity/udacity-driverless-car-nd-p2), [[Report]](https://github.com/hengck23-udacity/udacity-driverless-car-nd-p2/blob/master/submission%28notebook%2Bhtml%29/002/writeup_report.pdf)
 
 > 이미지 전처리 부분만 다룸
 
@@ -191,14 +197,14 @@ X_test_norm = (X_test - X_test.mean()) / (np.max(X_test) - np.min(X_test))
 - Sometimes standardising images can transform them from readable to humanly unreadable:
 - Normalising images brings out features we wouldn’t have been able to see otherwise.
 
-       
+
+---       
               
-# Waleed Abdulla의 해결 방안
-[[작성글]][Waleed Abdulla], [[Jupyter]](https://github.com/waleedka/traffic-signs-tensorflow/blob/master/notebook1.ipynb), [[GitHub]](https://github.com/waleedka/traffic-signs-tensorflow)
+# [Waleed Abdulla의 해결 방안](https://medium.com/@waleedka/traffic-sign-recognition-with-tensorflow-629dffc391a6#.ch8tmfwsn)
 
-> 텐서플로우를 이용한 접근법 
+> [[Jupyter]](https://github.com/waleedka/traffic-signs-tensorflow/blob/master/notebook1.ipynb), [[GitHub]](https://github.com/waleedka/traffic-signs-tensorflow)
 
-http://http://128.46.80.28:8585/Jupyter/lab
+
     
 --- 
 
